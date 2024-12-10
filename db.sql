@@ -54,3 +54,22 @@ CREATE TABLE PARTICIPER (
     FOREIGN KEY (membre_id) REFERENCES MEMBRE(id),
     FOREIGN KEY (tournoi_id) REFERENCES TOURNOI(id)
 );
+
+INSERT INTO MEMBRE (pseudo, email, date_inscription)
+VALUES
+('othman', 'othman@example.com', '2023-05-01'),
+('khalid', 'khalid@example.com', '2023-06-15'),
+('adnan', 'adnan@example.com', '2023-07-20');
+
+INSERT INTO ABONNEMENT (type_abonnement, date_debut, date_fin)
+VALUES
+('Mensuel', '2023-01-01', '2023-01-31'),
+('Annuel', '2023-01-01', '2023-12-31'),
+('Trimestriel', '2023-04-01', '2023-06-30');
+
+INSERT INTO JEU (titre, studio_developpement, annee_sortie, genre, multijoueur)
+VALUES
+('Jeu d\'aventure', 'Studio Alpha', 2022, 'Aventure', TRUE),
+('Course rapide', 'Beta Games', 2021, 'Course', TRUE),
+('Puzzle Master', 'Gamma Studios', 2020, 'Puzzle', FALSE);
+
